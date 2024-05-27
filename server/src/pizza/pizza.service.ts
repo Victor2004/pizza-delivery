@@ -13,23 +13,31 @@ export class PizzaService {
   ) { }
 
   async create(createPizzaDto: CreatePizzaDto) {
-    return 'This action adds a new pizza';
+    const pizza = this.pizzaRepository.create(createPizzaDto);
+    const created = await this.pizzaRepository.save(pizza);
+    return created;
   }
 
-  async findAll() {
+  findAll() {
     // return `This action returns all pizza`;
-    return await this.pizzaRepository.findAll();
+    return this.pizzaRepository.find();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} pizza`;
+    // return `This action returns a #${id} pizza`;
+    return this.pizzaRepository.find({
+      where: {
+        ProductID: id,
+      }
+    });
   }
 
-  update(id: number, updatePizzaDto: UpdatePizzaDto) {
-    return `This action updates a #${id} pizza`;
+  async update(id: number, updatePizzaDto: UpdatePizzaDto) {
+    await this.pizzaRepository.update(id, updatePizzaDto);
+    return this.pizzaRepository.findOneBy({ ProductID: id });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} pizza`;
+    return this.pizzaRepository.delete(id);
   }
 }

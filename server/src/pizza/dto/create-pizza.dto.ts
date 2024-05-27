@@ -1,1 +1,5 @@
-export class CreatePizzaDto {}
+export class CreatePizzaDto {
+    ProductName: string;
+    ProductTypeID?: number;
+    Price: number;
+}

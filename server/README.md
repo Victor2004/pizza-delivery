@@ -1,5 +1,31 @@
-# Локальный сервер
+## Локальный сервер
 http://localhost:3000/
+
+## Read all
+```bash
+curl http://localhost:3000/pizza
+```
+
+## Read id
+```bash
+curl http://localhost:3000/pizza/1
+```
+
+## Create
+```bash
+curl http://localhost:3000/pizza -X POST -H "Content-Type: application/json" -d '{"ProductName": "Цезарь", "ProductTypeID": 1, "Price": 999}' 
+```
+
+## Update
+```bash
+curl http://localhost:3000/pizza/2 -X PATCH -H "Content-Type: application/json" -d '{"ProductName": "Воздух", "ProductTypeID": 5, "Price": 100}'
+```
+
+## Delete
+```bash
+curl http://localhost:3000/pizza/2 -X DELETE
+```
+
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>

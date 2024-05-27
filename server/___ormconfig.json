@@ -1,0 +1,7 @@
+{
+    "type": "sqlite",
+    "database": "db/sql.db",
+    "entities": ["src/pizza/entities/**/*.ts"],
+    "migrations": ["/*...*/"],
+    "migrationsTableName": "custom_migration_table"
+}

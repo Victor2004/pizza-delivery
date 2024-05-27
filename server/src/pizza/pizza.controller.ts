@@ -5,7 +5,7 @@ import { UpdatePizzaDto } from './dto/update-pizza.dto';
 
 @Controller('pizza')
 export class PizzaController {
-  constructor(private readonly pizzaService: PizzaService) {}
+  constructor(private readonly pizzaService: PizzaService) { }
 
   @Post()
   create(@Body() createPizzaDto: CreatePizzaDto) {
@@ -13,7 +13,7 @@ export class PizzaController {
   }
 
   @Get()
-  findAll() {
+  async findAll() {
     return this.pizzaService.findAll();
   }
 
