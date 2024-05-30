@@ -1,0 +1,73 @@
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
+    grid-gap: 40px;
+  }
+  
+  .pizza-container {
+    width: 200px;
+    height: auto;
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pizza-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .pizza-info {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin-top: 0px;
+  }
+  
+  .pizza-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .pizza-info p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #0F9D58;
+    border-radius: 100%;
+    border: none;
+    color: #fff;
+    margin-left: 7px;
+    margin-right: 0px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    margin-left: 112px;
+  }
+  
+  .delete-btn {
+    background-color: #DB4437;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0c7f47;
+    border: 2px solid black;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ae372c;
+    border: 2px solid black;
+  }
